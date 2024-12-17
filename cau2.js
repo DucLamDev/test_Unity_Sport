@@ -164,9 +164,6 @@ const testTwoSumFunctions = (functions) => {
 // Định nghĩa các hàm cần test
 const functions = [
     { name: "twoSum", func: twoSum },
-    // { name: "twoSumBruteForce", func: twoSumBruteForce },
-    // { name: "twoSumTwoPointers", func: twoSumTwoPointers },
-    // { name: "twoSumUsingSet", func: twoSumUsingSet },
 ];
 
 // Gọi hàm test

@@ -31,7 +31,7 @@ const isPalindrome3 = (s) => {
     return checkPalindrome(0, filteredString.length - 1);
 };
 
-//Sử dụng Stack
+//Thuật toán 4: Sử dụng Stack
 const isPalindrome4 = (s) => {
     const filteredString = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     const stack = [];

@@ -62,26 +62,11 @@ const compressFile = (inputFile, outputCompressedFile, outputMinimizedFile) => {
     }
 };
 
-// Giải nén file JSON
-const decompressFile = (inputCompressedFile, outputDecompressedFile) => {
-    try {
-        // Đọc file nén
-        const compressedData = fs.readFileSync(inputCompressedFile, 'utf8');
-
-        // Giải nén dữ liệu
-        const decompressedData = decompressRLE(compressedData);
-        fs.writeFileSync(outputDecompressedFile, decompressedData);
-        console.log(`File đã được giải nén: ${outputDecompressedFile}`);
-    } catch (error) {
-        console.error('Lỗi khi giải nén file:', error);
-    }
-};
 
 // Chạy thử với các file mẫu
 const inputFile = 'data.json';
 const outputMinimizedFile = 'data.min.json';
 const outputCompressedFile = 'data.min.json.rle';
-// const outputDecompressedFile = 'data.decompressed.json';
+
 
 compressFile(inputFile, outputCompressedFile, outputMinimizedFile);
-// decompressFile(outputCompressedFile, outputDecompressedFile);
